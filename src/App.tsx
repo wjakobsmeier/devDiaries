@@ -1,14 +1,38 @@
-import { Button, DatePicker, version } from 'antd';
+import { Button } from 'antd';
 import 'antd/dist/antd.css';
 import './App.css';
 
 function App() {
+  const startTimer = () => {
+    console.log('start timer');
+  };
+
+  const stopTimer = () => {
+    console.log('stop timer');
+  };
+
+  const saveTimer = () => {
+    console.log('save timer');
+  };
+
+  const resetTimer = () => {
+    console.log('reset timer');
+  };
+
   return (
     <div className="App">
-      <h1>antd version: {version}</h1>
-      <DatePicker />
-      <Button type="primary" style={{ marginLeft: 8 }}>
-        Primary Button
+      <p>02:45:45</p>
+      <Button size="large" onClick={() => startTimer()}>
+        start
+      </Button>
+      <Button size="large" onClick={() => stopTimer()}>
+        stop
+      </Button>
+      <Button size="large" onClick={() => saveTimer()}>
+        save
+      </Button>
+      <Button danger size="large" onClick={() => resetTimer()}>
+        reset
       </Button>
     </div>
   );
